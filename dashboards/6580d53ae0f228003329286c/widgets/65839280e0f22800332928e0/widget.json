@@ -1,0 +1,347 @@
+{
+    "_dataSourcePermission": "edit",
+    "_toDisableOptionsList": {
+        "widgets": {
+            "duplicate": false
+        }
+    },
+    "dashboardid": "6580d53ae0f228003329286c",
+    "datasource": {
+        "address": "LocalHost",
+        "database": "aSampleIAAaECommerce",
+        "fullname": "localhost/Sample ECommerce",
+        "id": "localhost_aSampleIAAaECommerce",
+        "live": false,
+        "title": "Sample ECommerce"
+    },
+    "desc": null,
+    "drillToDashboardConfig": {
+        "dashboardIds": [
+        ],
+        "displayDashboardsPane": true,
+        "displayFilterPane": true,
+        "displayHeaderRow": true,
+        "displayToolbarRow": true,
+        "drillToDashboardByName": false,
+        "drillToDashboardMenuCaption": "Jump to dashboard",
+        "drillToDashboardNavigateType": 2,
+        "drillToDashboardNavigateTypeCharts": 1,
+        "drillToDashboardNavigateTypeOthers": 3,
+        "drillToDashboardNavigateTypePivot": 2,
+        "drillToDashboardRightMenuCaption": "Jump to ",
+        "drilledDashboardDisplayType": 2,
+        "drilledDashboardPrefix": "_drill",
+        "drilledDashboardsFolderPrefix": "",
+        "excludeFilterDims": [
+        ],
+        "forceZeroInsteadNull": false,
+        "hideDrilledDashboards": true,
+        "hideSharedDashboardsForNonOwner": true,
+        "includeFilterDims": [
+        ],
+        "mergeTargetDashboardFilters": false,
+        "modalWindowResize": false,
+        "resetDashFiltersAfterJTD": false,
+        "sameCubeRestriction": true,
+        "sendPieChartMeasureFiltersOnClick": true,
+        "showFolderNameOnMenuSelection": false,
+        "showJTDIcon": true,
+        "volatile": false
+    },
+    "metadata": {
+        "ignore": {
+            "all": false,
+            "dimensions": [
+            ],
+            "ids": [
+            ]
+        },
+        "panels": [
+            {
+                "items": [
+                    {
+                        "field": {
+                            "id": "[Commerce.Brand ID]",
+                            "index": 0
+                        },
+                        "instanceid": "0D47C-C24C-74",
+                        "jaql": {
+                            "column": "Brand ID",
+                            "datatype": "numeric",
+                            "dim": "[Commerce.Brand ID]",
+                            "merged": true,
+                            "table": "Commerce",
+                            "title": "Brand ID"
+                        },
+                        "panel": "rows"
+                    }
+                ],
+                "name": "rows"
+            },
+            {
+                "items": [
+                    {
+                        "field": {
+                            "id": "[Commerce.Cost]_sum",
+                            "index": 1
+                        },
+                        "format": {
+                            "color": {
+                                "type": "color"
+                            },
+                            "mask": {
+                                "b": true,
+                                "decimals": "auto",
+                                "isdefault": true,
+                                "separated": true,
+                                "t": true,
+                                "type": "number"
+                            }
+                        },
+                        "instanceid": "07583-2B53-FA",
+                        "jaql": {
+                            "context": {
+                                "[8B8C5-09F]": {
+                                    "column": "Cost",
+                                    "datatype": "numeric",
+                                    "dim": "[Commerce.Cost]",
+                                    "table": "Commerce",
+                                    "title": "Cost"
+                                }
+                            },
+                            "datatype": "numeric",
+                            "formula": "RANK(sum([8B8C5-09F]))",
+                            "sort": "asc",
+                            "sortDetails": {
+                                "dir": "asc",
+                                "field": 1,
+                                "initialized": true,
+                                "isLastApplied": true,
+                                "sortingLastDimension": true
+                            },
+                            "title": "RANK(sum([Cost]))",
+                            "type": "measure"
+                        },
+                        "panel": "measures"
+                    }
+                ],
+                "name": "values"
+            },
+            {
+                "items": [
+                ],
+                "name": "columns"
+            },
+            {
+                "items": [
+                    {
+                        "instanceid": "9FF1E-6914-59",
+                        "jaql": {
+                            "collapsed": true,
+                            "context": {
+                                "[8B8C5-09F]": {
+                                    "column": "Cost",
+                                    "datatype": "numeric",
+                                    "dim": "[Commerce.Cost]",
+                                    "table": "Commerce",
+                                    "title": "Cost"
+                                }
+                            },
+                            "datasource": {
+                                "address": "LocalHost",
+                                "database": "aSampleIAAaECommerce",
+                                "fullname": "localhost/Sample ECommerce",
+                                "id": "localhost_aSampleIAAaECommerce",
+                                "live": false,
+                                "title": "Sample ECommerce"
+                            },
+                            "datatype": "numeric",
+                            "dimension": "[Commerce.Brand ID]",
+                            "filter": {
+                                "from": 1,
+                                "to": 7
+                            },
+                            "firstday": "mon",
+                            "formula": "RANK(sum([8B8C5-09F]))",
+                            "locale": "en-gb",
+                            "sort": null,
+                            "title": "CustomBloXFilter",
+                            "type": "measure"
+                        },
+                        "panel": "scope"
+                    }
+                ],
+                "name": "filters"
+            }
+        ],
+        "usedFormulasMapping": {
+        }
+    },
+    "oid": "65839280e0f22800332928e0",
+    "options": {
+        "autoUpdateOnEveryChange": true,
+        "dashboardFiltersMode": "filter",
+        "drillToAnywhere": true,
+        "selector": false,
+        "triggersDomready": true
+    },
+    "query": {
+        "by": "widget",
+        "dashboard": "6580d53ae0f228003329286c;Dynamic Blox Filter",
+        "datasource": {
+            "address": "LocalHost",
+            "database": "aSampleIAAaECommerce",
+            "fullname": "localhost/Sample ECommerce",
+            "id": "localhost_aSampleIAAaECommerce",
+            "live": false,
+            "title": "Sample ECommerce"
+        },
+        "format": "pivot",
+        "grandTotals": {
+            "title": "Grand Total"
+        },
+        "isMaskedResult": true,
+        "m2mThresholdFlag": 0,
+        "metadata": [
+            {
+                "field": {
+                    "id": "[Commerce.Brand ID]",
+                    "index": 0
+                },
+                "handlers": [
+                ],
+                "instanceid": "0D47C-C24C-74",
+                "jaql": {
+                    "column": "Brand ID",
+                    "datatype": "numeric",
+                    "dim": "[Commerce.Brand ID]",
+                    "merged": true,
+                    "table": "Commerce",
+                    "title": "Brand ID"
+                },
+                "panel": "rows"
+            },
+            {
+                "field": {
+                    "id": "[Commerce.Cost]_sum",
+                    "index": 1
+                },
+                "format": {
+                    "color": {
+                        "color": "transparent",
+                        "type": "color"
+                    },
+                    "mask": {
+                        "b": true,
+                        "decimals": "auto",
+                        "isdefault": true,
+                        "separated": true,
+                        "t": true,
+                        "type": "number"
+                    }
+                },
+                "handlers": [
+                    {
+                    },
+                    {
+                    }
+                ],
+                "instanceid": "07583-2B53-FA",
+                "jaql": {
+                    "context": {
+                        "[8B8C5-09F]": {
+                            "column": "Cost",
+                            "datatype": "numeric",
+                            "dim": "[Commerce.Cost]",
+                            "table": "Commerce",
+                            "title": "Cost"
+                        }
+                    },
+                    "datatype": "numeric",
+                    "formula": "RANK(sum([8B8C5-09F]))",
+                    "sort": "asc",
+                    "sortDetails": {
+                        "dir": "asc",
+                        "field": 1,
+                        "initialized": true,
+                        "isLastApplied": true,
+                        "sortingLastDimension": true
+                    },
+                    "title": "RANK(sum([Cost]))",
+                    "type": "measure"
+                },
+                "panel": "measures"
+            },
+            {
+                "handlers": [
+                ],
+                "instanceid": "9FF1E-6914-59",
+                "jaql": {
+                    "collapsed": true,
+                    "context": {
+                        "[8B8C5-09F]": {
+                            "column": "Cost",
+                            "datatype": "numeric",
+                            "dim": "[Commerce.Cost]",
+                            "table": "Commerce",
+                            "title": "Cost"
+                        }
+                    },
+                    "datasource": {
+                        "address": "LocalHost",
+                        "database": "aSampleIAAaECommerce",
+                        "fullname": "localhost/Sample ECommerce",
+                        "id": "localhost_aSampleIAAaECommerce",
+                        "live": false,
+                        "title": "Sample ECommerce"
+                    },
+                    "datatype": "numeric",
+                    "dimension": "[Commerce.Brand ID]",
+                    "filter": {
+                        "from": 1,
+                        "to": 7
+                    },
+                    "firstday": "mon",
+                    "formula": "RANK(sum([8B8C5-09F]))",
+                    "locale": "en-gb",
+                    "title": "CustomBloXFilter",
+                    "type": "measure"
+                },
+                "panel": "scope"
+            }
+        ],
+        "widgetType": "pivot2"
+    },
+    "realTimeRefreshing": false,
+    "style": {
+        "automaticHeight": true,
+        "colors": {
+            "columns": false,
+            "headers": false,
+            "members": false,
+            "rows": true,
+            "totals": false
+        },
+        "narration": {
+            "aggregation": "sum",
+            "display": "above",
+            "enabled": false,
+            "format": "bullets",
+            "labels": [
+                {
+                    "id": "brand_id",
+                    "plural": "Brand ID",
+                    "singular": "Brand ID",
+                    "title": "Brand ID"
+                }
+            ],
+            "up_sentiment": "good",
+            "verbosity": "medium"
+        },
+        "pageSize": 25,
+        "scroll": false
+    },
+    "subtype": "pivot2",
+    "title": "",
+    "type": "pivot2"
+}
