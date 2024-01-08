@@ -45,6 +45,28 @@
                                 "width": 100
                             }
                         ]
+                    },
+                    {
+                        "subcells": [
+                            {
+                                "elements": [
+                                    {
+                                        "autoHeight": "645px",
+                                        "defaultWidth": 512,
+                                        "height": "645px",
+                                        "maxHeight": 2048,
+                                        "maxWidth": 2048,
+                                        "minHeight": 128,
+                                        "minWidth": 128,
+                                        "widgetid": "659c826afbd9ac0033c5ae32"
+                                    }
+                                ],
+                                "index": 0,
+                                "pxlWidth": 1652.2,
+                                "stretchable": false,
+                                "width": 100
+                            }
+                        ]
                     }
                 ],
                 "index": 0,
@@ -53,11 +75,11 @@
             }
         ],
         "container": {
-            "sizzle1703206813052": {
+            "sizzle1704754211735": {
                 "undefined": {
                     "parentNode": [
-                        333.43489453468334,
-                        23,
+                        32,
+                        25,
                         true
                     ]
                 }

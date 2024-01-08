@@ -1,4 +1,5 @@
 {
+    "allowChangeSubscription": false,
     "dataExploration": false,
     "datasource": {
         "address": "LocalHost",
@@ -30,9 +31,30 @@
             "name": "Vivid"
         }
     },
+    "subscription": {
+        "active": false,
+        "context": {
+            "dashboardid": "6580d53ae0f228003329286c"
+        },
+        "emailSettings": {
+            "isEmail": true,
+            "isPdf": false
+        },
+        "executionPerDay": 1,
+        "isDataChange": true,
+        "reportType": {
+            "inline": true
+        },
+        "schedule": "* * * * * *",
+        "startAt": "2024-01-09",
+        "timezone": -660,
+        "type": "onUpdate",
+        "tzName": "Australia/Sydney"
+    },
     "title": "Dynamic Blox Filter",
     "widgets": [
         "./widgets/65838331e0f22800332928b1/widget.json",
-        "./widgets/65839280e0f22800332928e0/widget.json"
+        "./widgets/65839280e0f22800332928e0/widget.json",
+        "./widgets/659c826afbd9ac0033c5ae32/widget.json"
     ]
 }

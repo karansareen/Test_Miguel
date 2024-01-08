@@ -186,8 +186,6 @@
         "triggersDomready": true
     },
     "query": {
-        "by": "widget",
-        "dashboard": "6580d53ae0f228003329286c;Dynamic Blox Filter",
         "datasource": {
             "address": "LocalHost",
             "database": "aSampleIAAaECommerce",
@@ -200,7 +198,6 @@
         "grandTotals": {
             "title": "Grand Total"
         },
-        "isMaskedResult": true,
         "m2mThresholdFlag": 0,
         "metadata": [
             {
@@ -309,8 +306,7 @@
                 },
                 "panel": "scope"
             }
-        ],
-        "widgetType": "pivot2"
+        ]
     },
     "realTimeRefreshing": false,
     "style": {
